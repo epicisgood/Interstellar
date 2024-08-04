@@ -1,0 +1,68 @@
+name: Publish multiple images to Docker Hub
+
+on:
+  [workflow_dispatch]
+
+jobs:
+  publish_images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # This will be my link
+      - name: Build sasuke838 image
+        run: docker build . -t sasuke838/sasuke838:latest
+      - name: Push sasuke838 image
+        run: |
+          echo "dckr_pat_bv626sPGsfQYbgI01tcD46SMOpg" | docker login -u sasuke838 --password-stdin
+          docker push sasuke838/sasuke838:latest
+
+      # galaxy galitec
+      - name: Build user681 image
+        run: docker build . -t user681/user681:latest
+      - name: Push user681 image
+        run: |
+          echo "dckr_pat_sCGBI6tubsL26PDNRQ9s7JuPEJ4" | docker login -u user681 --password-stdin
+          docker push user681/user681:latest
+
+      # placeholder link will put one soon 
+      - name: Build bando12 image
+        run: docker build . -t bando12/bando12:latest
+      - name: Push bando12 image
+        run: |
+          echo "dckr_pat_jBC4Ir8Eeb5yzGYXJRh26mAWUZU" | docker login -u bando12 --password-stdin
+          docker push bando12/bando12:latest
+
+      # super fivehokies
+      - name: Build storm69 image
+        run: docker build . -t storm69/storm69:latest
+      - name: Push storm69 image
+        run: |
+          echo "dckr_pat_7biXokKQCK2ej1LFaJYD-9v3vO4" | docker login -u storm69 --password-stdin
+          docker push storm69/storm69:latest
+
+
+      # warzone five hokies
+      - name: Build fort30 image
+        run: docker build . -t fort30/fort30:latest
+      - name: Push fort30 image
+        run: |
+          echo "dckr_pat_YX-SFAVeApGr_puKedwStNqSybY" | docker login -u fort30 --password-stdin
+          docker push fort30/fort30:latest
+
+      # links tantrum 
+      - name: Build mouse134 image
+        run: docker build . -t mouse134/mouse134:latest
+      - name: Push mouse134 image
+        run: |
+          echo "dckr_pat_qCD-B95tZ5FgG4Xifng_JNEzeX4" | docker login -u mouse134 --password-stdin
+          docker push mouse134/mouse134:latest
+
+      # gas.garmanage
+      - name: Build ducker556 image
+        run: docker build . -t ducker556/ducker556:latest
+      - name: Push ducker556 image
+        run: |
+          echo "dckr_pat_uHbvYrRGe9RN6X9WGgIYeENr26k" | docker login -u ducker556 --password-stdin
+          docker push ducker556/ducker556:latest
