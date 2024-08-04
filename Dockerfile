@@ -1,12 +1,12 @@
-FROM node:bookworm-slim
+FROM node:20-slim
 ENV NODE_ENV=production
 
 WORKDIR /app
 
-COPY ["package.json", "./"]
+COPY ["package.json", "package-lock.json*", "./"]
 
 RUN npm install
 
 COPY . .
 
-CMD [ "node", "index.js" ]
+CMD ["npm", "run", "start"]
