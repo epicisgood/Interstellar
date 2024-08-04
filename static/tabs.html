@@ -10,6 +10,7 @@
     <title id="tab-title">Home</title>
     <link rel="stylesheet" href="/assets/css/global.css?v=6" />
     <link rel="stylesheet" href="/assets/css/tabs.css?v=4" />
+    <link rel="stylesheet" href="/assets/css/epic.css">
     <script src="https://kit.fontawesome.com/1237c86ba0.js" crossorigin="anonymous"></script>
     <script>
       window.addEventListener("resize", navigator.keyboard.lock(["Escape"]))
@@ -26,16 +27,16 @@
       <div class="nav-container">
         <div class="nav-left">
           <button title="Home Page" id="home-page" class="nav-button" onclick="Home()">
-            <i class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-house">Home</i>
           </button>
           <button title="Back Arrow" class="nav-button" onclick="goBack()">
-            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-arrow-left">Back</i>
           </button>
           <button title="Forward Arrow" class="nav-button" onclick="goForward()">
-            <i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right">Forward</i>
           </button>
           <button title="Reload" onclick="reload()" class="nav-button">
-            <i class="fa-solid fa-rotate-right"></i>
+            <i class="fa-solid fa-rotate-right">Reload</i>
           </button>
           <form id="fs" class="navpost" method="POST">
             <input
@@ -51,24 +52,24 @@
             id="fullscreen-button"
             class="nav-button nav-btn-right"
             onclick="FS()">
-            <i class="fa-solid fa-expand"></i>
+            <i class="fa-solid fa-expand">FullScreen</i>
           </button>
           <button
             title="Window Popout"
             id="popout-button"
             class="nav-button nav-btn-right"
             onclick="popout()">
-            <i class="fa-solid fa-up-right-from-square"></i>
+            <i class="fa-solid fa-up-right-from-square">Popout</i>
           </button>
           <button
             title="Inspect"
             id="eruda-button"
             class="nav-button nav-btn-right"
             onclick="erudaToggle()">
-            <i class="fa-solid fa-code"></i>
+            <i class="fa-solid fa-code">Inspect</i>
           </button>
           <button title="Tabs" id="tabs-button" class="nav-button nav-btn-right">
-            <i class="fa-solid fa-magnifying-glass-minus"></i>
+            <i class="fa-solid fa-magnifying-glass-minus">Hide</i>
           </button>
         </div>
       </div>

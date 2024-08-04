@@ -18,6 +18,9 @@ if (nav) {
     LogoUrl = "/assets/media/favicon/main-inverted.png";
   }
   const html = `
+    <p id="watermark"><b>made by epic</b></p>
+    <p id="version"><b>Version 5.2.4</b></p>
+    
     <div class="fixed-nav-bar-container">
       <div id="icon-container">
         <a class="icon" href="/./"><img alt="nav" id="INImg" src="${LogoUrl}"/></a>
@@ -318,7 +321,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Key
 document.addEventListener("DOMContentLoaded", () => {
   const eventKey = JSON.parse(localStorage.getItem("eventKey")) || ["Ctrl", "E"];
-  const pLink = localStorage.getItem("pLink") || "https://classroom.google.com/";
+  const pLink = localStorage.getItem("pLink") || "https://google.com/";
   let pressedKeys = [];
 
   document.addEventListener("keydown", event => {
